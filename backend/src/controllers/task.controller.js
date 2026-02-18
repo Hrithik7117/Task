@@ -22,8 +22,7 @@ export const getTasks = async (req, res, next) => {
 };
 
 export const deleteTask = async (req, res, next) => {
-  console.log("Cookies in request:", req.cookies);
-console.log("req.user:", req.user);
+ 
 
   try {
     await Task.findByIdAndDelete(req.params.id);
