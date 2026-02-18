@@ -1,40 +1,43 @@
-# Task Manager App (Scalable REST API + React Frontend)
+# Task Manager Project
 
-> A scalable, secure full-stack task management application with user authentication, role-based access control, and a clean React + Tailwind frontend.
+## Overview
+This is a full-stack Task Manager project with authentication and CRUD operations for tasks. It includes:
+
+- **Backend:** Node.js + Express + MongoDB
+- **Frontend:** React (basic UI)
+- **Authentication:** JWT with HTTP-only cookies
+- **Role-based access:** Users and Admins
 
 ---
 
 ## Features
 
-### Backend (Node.js + Express + MongoDB)
+1. **Authentication**
+   - User registration (`POST /auth/register`)
+   - User login (`POST /auth/login`)
+   - Admin role can delete tasks
 
-- User registration and login with **hashed passwords** and **JWT authentication**
-- Role-based access control (User vs Admin)
-- CRUD APIs for tasks linked to authenticated users
-- API versioning (`/api/v1/`)
-- Global error handling and input validation
-- Modular, scalable project structure using ES modules
-- MongoDB data storage with Mongoose models
+2. **Task Management**
+   - Create a task (`POST /tasks`)
+   - Get all tasks (`GET /tasks`)
+   - Delete a task (`DELETE /tasks/:id`) – admin only
 
-### Frontend (React + Tailwind CSS)
+3. **Frontend**
+   - Basic React UI to register, login, create, list, and delete tasks
+   - Connected to backend APIs using Axios (`withCredentials: true`)
 
-- Responsive UI with clean Tailwind styling
-- User registration and login forms
-- Protected dashboard accessible only with valid JWT
-- Task management (create, list, delete tasks)
-- Axios API client with JWT interceptor for authorization headers
-- React Router for client-side routing with protected routes
-
+4. **API Documentation**
+   - Postman collection included: `PostmanCollection.json`  
+   - Can be imported into Postman to test all endpoints
 
 ---
 
-### Setup Instructions
+## Setup Instructions
 
-#### Backend Setup
-
-1. Navigate to the `backend` folder:
-
+### Backend
+1. Clone the repo:  
    ```bash
+   git clone https://github.com/yourusername/Task-manager.git
    cd backend
    
 2. Install dependencies: 
