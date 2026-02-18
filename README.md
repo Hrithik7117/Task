@@ -38,7 +38,9 @@
    cd backend
    
 2. Install dependencies: 
-npm install
+    
+   ```bash
+   npm install
 
 3. .env file in the backend folder with the following content:
 MONGO_URI=your_mongodb_connection_string
@@ -46,7 +48,9 @@ JWT_SECRET=your_jwt_secret_key
 PORT=5000
 
 4. Start the backend server
-npm run dev
+
+   ```bash
+   npm run dev
 
 #### Frontend Setup
 
@@ -55,11 +59,15 @@ npm run dev
    ```bash
    cd frontend
    
-2. Install dependencies: 
-npm install
+2. Install dependencies:
+
+    ```bash
+   npm install
 
 3.Start the React development server:
-npm run dev
+
+ ```bash
+   npm run dev
 
 
 
