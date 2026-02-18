@@ -29,8 +29,26 @@ This is a full-stack Task Manager project with authentication and CRUD operation
 4. **API Documentation**
    - Postman collection included: `PostmanCollection.json`  
    - Can be imported into Postman to test all endpoints
+  
+
+ **How to use Postman Collection**
+  Register User:
+POST /api/v1/auth/register → create a new user (password ≥ 6 characters).
+Login:
+POST /api/v1/auth/login → copy the JWT token into {{token}}.
+
+Tasks CRUD:
+POST /api/v1/tasks → create a task
+GET /api/v1/tasks → get tasks
+DELETE /api/v1/tasks/{{taskId}} → delete task (admin only)
+
+Notes:
+
+All task requests require JWT in Authorization header.
+Replace {{taskId}} with a valid task ID for deletion.
 
 ---
+
 
 ## Setup Instructions
 
